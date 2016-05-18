@@ -1,0 +1,15 @@
+
+
+
+div.songbox {
+  width: 30%;
+  display: inline-block;
+  position: absolute;
+}
+
+
+body {
+  color: #BB1010;
+  background-color: #300000;
+
+}

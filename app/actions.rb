@@ -1,33 +1,24 @@
 # Homepage (Root path)
 get '/' do
+  @song = Song.new
+  @songs = Song.all
   erb :index
 end
 
-get '/messages' do
-  @messages = Message.all
-  erb :'messages/index'
-end
-
-get '/messages/new' do
-  @message = Message.new
-  erb :'/messages/new'
-end
-
-post '/messages' do
-  @message = Message.new(
+post '/newsong' do
+  @song = Song.create(
+  artist: params[:artist],
   title: params[:title],
-  content: params[:content],
-  author: params[:author]
+  url: params[:url]
   )
-  if @message.save
-    redirect '/messages'
+  if @song.save
+    redirect '/'
   else
-    erb :'/messages/new'
+    redirect '/derp'
   end #if/else
-
 end
 
-get '/messages/:id' do
-  @message = Message.find params[:id]
-  erb :'messages/show'
-end
+
+get '/derp' do
+  erb :derp
+end #derp
