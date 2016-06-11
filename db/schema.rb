@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516191207) do
+ActiveRecord::Schema.define(version: 20160605030920) do
 
-  create_table "messages", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.string "content"
+  create_table "cards", force: :cascade do |t|
+    t.text    "front"
+    t.text    "back"
+    t.integer "score"
   end
 
 end

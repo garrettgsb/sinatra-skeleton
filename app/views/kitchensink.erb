@@ -1,0 +1,53 @@
+<h1>Home Page</h1>
+<ul class="accordion" data-accordion role="tablist">
+  <li class="accordion-item is-active">
+    <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
+    <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
+    <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
+    <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+      Panel 1. Lorem ipsum dolor
+    </div>
+  </li>
+  <li class="accordion-item">
+    <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
+    <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
+    <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
+    <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+      Panel 2. Lorem ipsum dolor
+    </div>
+  </li>
+  <li class="accordion-item">
+    <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
+    <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Accordion 1</a>
+    <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
+    <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+      Panel 3. Lorem ipsum dolor
+    </div>
+  </li>
+</ul>
+
+<a href="about.html" class="button">Learn More</a>
+<a href="#features" class="button">View All Features</a>
+
+<!-- Buttons (actions) -->
+<button type="button" class="success button">Save</button>
+<button type="button" class="alert button">Delete</button>
+
+
+<div class="success progress" role="progressbar" tabindex="0" aria-valuenow="10" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+  <div class="progress-meter" style="width: 0%">
+    <p class="progress-meter-text">25%</p>
+  </div>
+</div>
+<p class="progress-meter-ticker" style="text-align: center">25%</p>
+<script>
+  var i = 10;
+
+  setInterval(function() {
+    if (i <= 100) {
+    $(".progress-meter").attr("style", "width: " + i + "%;");
+    $(".progress-meter-ticker").text(i + "%");
+    i++
+    };
+  }, 30);
+</script>

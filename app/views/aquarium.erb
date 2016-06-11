@@ -1,0 +1,43 @@
+<div class="aquarium">
+<div class="aquarium-overlay">
+  <h2>JUST</h2>
+  <h1>KEEP</h1>
+  <h3>SWIMMING</h3>
+</div>
+</div>
+
+
+<script>
+var $aquarium = $(".aquarium");
+// var $bubble = document.createElement"<div class='bubble'></div>")
+// $aquarium.append($bubble);
+// $aquarium.append($bubble);
+// $aquarium.append($bubble);
+// $aquarium.append($bubble);
+// $aquarium.append($bubble);
+setInterval(function(){
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+  $aquarium.append($(bubbleGenerate()));
+
+
+  $('.bubble').each(function(i,e) {$(e).animate({marginTop: -40}, $(e).data("riseSpeed"), function(){
+    if ($(e).position()['top'] < 1) { $(e).remove();}
+  });
+  })
+
+
+}, 500);
+
+
+
+</script>

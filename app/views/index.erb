@@ -1,1 +1,63 @@
 <h1>Home Page</h1>
+
+<style>
+  .donebox {
+      background-color: rgba(255, 0, 0, 0);
+      width: 400px;
+      height: 400px;
+      margin: auto;
+  }
+
+  .rectangle
+{
+   width: 300px;
+   height: 20px;
+   display: block;
+   position: relative;
+   border: 1px solid black;
+   margin: 20px 0;
+}
+
+.square-small
+{
+   display: block;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   background-color: red;
+}
+
+</style>
+
+
+<div class="success progress" role="progressbar" tabindex="0" aria-valuenow="10" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+  <div class="progress-meter" style="width: 0%">
+    <p class="progress-meter-text progress-meter-ticker">25%</p>
+  </div>
+</div>
+<p class="progress-meter-ticker" style="text-align: center">25%</p>
+
+<div class="rectangle">
+   <div class="square-small"></div>
+</div>
+
+<script>
+  var i = 10;
+
+  setInterval(function() {
+    if (i <= 100) {
+      $(".progress-meter").attr("style", "width: " + i + "%;");
+      $(".progress-meter-ticker").text(i + "%");
+    i++
+    };
+
+
+  }, 30);
+
+  $('.rectangle')
+   .find('.square-small')
+   .animate({
+      left: 280, top: 50
+    }, 'slow');
+
+</script>

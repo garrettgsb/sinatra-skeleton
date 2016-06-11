@@ -1,0 +1,87 @@
+:root {
+  --bg-dark: #203080;
+  --bg-med: #223dc1;
+  --fg-med: #3854df;
+  --fg-light: #4060ff;
+}
+
+.aquarium {
+ background-color: var(--bg-dark);
+ width: 100%;
+ height: 100%;
+
+}
+
+.bubble {
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--fg-light);
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  float: left;
+  position: absolute;
+}
+
+.bottom {
+  background-color: red;
+  opacity: 0.5;
+  width: 100%;
+  height: 50px;
+}
+
+.aquarium-overlay {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 2%;
+  position: absolute;
+  width: 20%;
+  height: auto;
+  margin-top: 20%;
+  margin-left: 40%;
+  text-align: center;
+
+}
+
+.aquarium-overlay h1, h2, h3 {
+
+  color: white;
+  opacity: 0.6;
+  font-family: Trebuchet;
+  font-weight: 900;
+}
+
+.memo-card {
+  min-width: 20px;
+  height: 160px;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+  padding-left: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,50,0.2);
+}
+
+.memo-buttons {
+  border-top: 1px solid rgba(0,0,50,0.2);
+  padding-top: 5px;
+  width: 100%;
+  height: 40px;
+  display: block;
+  align-items: center;
+}
+
+.memo-buttons a {
+  width: 45%;
+  margin: 0 5;
+}
+
+.memo-buttons a + a {
+  float: right;
+  margin-right: 5px;
+}
+
+.memo {
+  font-family: Trebuchet sans-serif;
+  text-align: center;
+  min-height: 60%;
+}
